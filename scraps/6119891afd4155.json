@@ -1,0 +1,96 @@
+{
+  "title": "BabylonjsにMMDモデルを効率よく拡張性高く表示する",
+  "closed": false,
+  "archived": false,
+  "created_at": "2025-05-13",
+  "comments": [
+    {
+      "author": "henohenon",
+      "created_at": "2025-05-13",
+      "body_markdown": "現状の認識。全部割と辛そうだな～という印象\n\n---\n1. mmd/pmx\n  - 拡張によって可能。初動が最も簡単、最低限のクオリティの保証\n  - 既存の資産が少なく、カスタマイズ性が非常に低い。少し難しいことをする場合ほぼフルスクラッチを覚悟。\n2. fbx/vrm\n  - 拡張によって可能。mmdからの変換が必要&要素が多く複雑。\n  - 既存の資産は個別にみればありそうだが全体でみたらやっぱり少ない。\n3. glb\n  - 軽く、公式でサポートされている。web側の既存の資産が比較的多い\n  - mmdのglb export部分に関して資産が少なく、またglbの制限が多いため苦労が予想される"
+    },
+    {
+      "author": "henohenon",
+      "created_at": "2025-05-13",
+      "body_markdown": "そもそもの考え方を考える。\n\n目的: 拡張性高くmmdの資産を流用しながらweb上でいろいろしたい。\n- これに対する最初の課題として、mmdの変換がある。\n- これの対処法としてmmd-toolsやblender/unityからの変換などがあげられる\n- unity-webglやmmd-toolsを使う場合の課題/利点\n    - メジャーでない形式であるため拡張する場合ツライ/資産がうまく使えない\n    - 既存のパワフルツールがあるため、とりあえず動かす分には申し分ない\n- glb変換する場合の課題/利点\n    - 満足いくクオリティでexportすることが難しい\n    - 拡張する場合比較的資産が生かしやすい。あと何よりモダンで早い",
+      "body_updated_at": "2025-05-13"
+    },
+    {
+      "author": "henohenon",
+      "created_at": "2025-05-13",
+      "body_markdown": "細かいところで躓くのは目に見えているが、、\nblenderでglb export頑張るで一旦fa。細かく詰まったりしたら書き足していく"
+    },
+    {
+      "author": "henohenon",
+      "created_at": "2025-05-13",
+      "body_markdown": "とりあえずmaterialの出力をやる。mmd-extensionのconvert to blenderはテクスチャを置き換えてくれるだけとかなんとかで、Principled BSDFに変換はしてくれないらしい。つまり手動です。\n![](https://storage.googleapis.com/zenn-user-upload/3f3b9eff2886-20250513.png)"
+    },
+    {
+      "author": "henohenon",
+      "created_at": "2025-05-13",
+      "body_markdown": "先に色々テストする。\n![](https://storage.googleapis.com/zenn-user-upload/cb2f8d9422af-20250513.png)\n一部貫通して描画されてしまう。\n\n次のコードで解消。\n- needDepthPrePass: alpha blendはデフォルトでは距離によってカリングされるところをこれだとちゃんと計算してくれる\n- alwaysSelectAsActiveMesh: どこにいてもメッシュを描画するオプション。\nこの二つ、間違いなく重くする設定なので考えてもよいかも\n```typescript\nfor(const mesh of scene.meshes) {\n    const mat = mesh.material;\n    if(mat) {\n        mat.needDepthPrePass = true;\n        mesh.material = mat;\n    }\n    mesh.alwaysSelectAsActiveMesh = true;\n}\n```\n\n(今回お借りしてるのはどっと式ミク様。カッコイイ！カワイイ！ありがとうございます。)\nhttps://bowlroll.net/file/173424"
+    },
+    {
+      "author": "henohenon",
+      "created_at": "2025-06-18",
+      "body_markdown": "xだけ位置指定がうまくいかなくて困ってた\nhttps://qiita.com/ya_n_n/items/5785b7f12eb21970ea4f\n\n全メッシュに付けてたのが原因みたい。rootにだけ適用するようにしてあげるとイイカンジになった",
+      "body_updated_at": "2025-06-18"
+    },
+    {
+      "author": "henohenon",
+      "created_at": "2025-06-18",
+      "body_markdown": "回転も躓いた\n`rotation`と`rotationQuaternion`があり、`rotationQuaternion`が存在する場合はこっちが優先になるらしい\n```typescript\nmesh.rotationQuaternion = null;\nmesh.rotation.set(new Vector(0, 0, 0));\n```\nか、\n```typescript\nmesh.rotationQuaternion = Quaternion.RotationYawPitchRoll(y, x, z);\n```\nとするといける。v6からなのかもとからなのかは謎。\n~~あと義務教育受けてないからラジアンとかわからないのでやめてほしい~~",
+      "body_updated_at": "2025-06-18"
+    },
+    {
+      "author": "henohenon",
+      "created_at": "2025-06-21",
+      "body_markdown": "ややずれるが、クロスフェードも苦戦したので置いておく\n```typescript\n// クロスフェード用\nEffect.ShadersStore[\"crossfadeFragmentShader\"] = `\n    varying vec2 vUV;\n    uniform sampler2D textureSampler;\n    uniform sampler2D blendTexture;\n    uniform float fade;\n\n    void main(void) {\n        vec4 col1 = texture2D(textureSampler, vUV);\n        vec4 col2 = texture2D(blendTexture, vUV);\n        gl_FragColor = mix(col1, col2, fade);\n    }\n`;\ncrossRt = new RenderTargetTexture(\n    \"crossRt\",\n    { width: engine.getRenderWidth(), height: engine.getRenderHeight() },\n    scene,\n    false        // generateMipMaps\n);\ncrossRt.renderList = scene.meshes;\n\ncrossPp = new PostProcess(\n    \"crossfade\",\n    \"crossfade\",\n    [\"fade\"],                      // ユニフォーム\n    [\"blendTexture\"],              // サンプラ名\n    1.0,\n    null,                  // 適用したいカメラ\n    undefined,\n    engine,\n    true\n);\ncrossPp.onApply = (effect) => {\n    effect.setTexture(\"blendTexture\", crossRt);\n    effect.setFloat(\"fade\", crossFadeRate);\n};\n\nlet crossFadeTween: TweenControl | null = null;\nexport const switchCameraWithCrossFade = async (key: CameraType, duration: number) => {\n    const currentCamera = _scene.activeCamera;\n    const nextCamera = cameras[key];\n    if (!currentCamera || !nextCamera) return;\n\n    // Cancel any existing tween\n    if (crossFadeTween) {\n        crossFadeTween.complete();\n        crossFadeTween = null;\n    }\n\n    crossRt.activeCamera = currentCamera;\n    _scene.customRenderTargets.push(crossRt);\n\n    nextCamera.attachPostProcess(crossPp);\n\n    crossFadeTween = tween(1, 0, duration, (value) => {\n        crossFadeRate = value;\n    });\n\n    _scene.activeCamera = nextCamera;\n\n\n    // Wait for the tween to complete using the Promise\n    await crossFadeTween.promise;\n\n    // After the tween completes\n    nextCamera.detachPostProcess(crossPp);\n    _scene.customRenderTargets.pop();\n    crossFadeTween = null;\n}\n```\nちょっと大きくなっちゃった。機会があったら意図とか加筆する、かも。"
+    },
+    {
+      "author": "henohenon",
+      "created_at": "2025-06-21",
+      "body_markdown": "tweenはゴリゴリ自作しちゃったのだが、babylonのanimationに乗っかったりできるのだろうか"
+    },
+    {
+      "author": "henohenon",
+      "created_at": "2025-07-06",
+      "body_markdown": "`><`が見える問題\n![](https://storage.googleapis.com/zenn-user-upload/ef29dc80fcd3-20250706.png)\n恐らくmmd側ではmaterialのプロパティをナニカシラに登録してたりして制御してるのかな？\nglbを逆にblender側にimportし、該当箇所を特定。元データ側のメッシュを削除することで解決"
+    },
+    {
+      "author": "henohenon",
+      "created_at": "2025-07-06",
+      "body_markdown": "...しなかった。瞳が消える"
+    },
+    {
+      "author": "henohenon",
+      "created_at": "2025-07-06",
+      "body_markdown": "> うわぁ……メッシュ内でマテリアルが複数使われてて、それぞれ透明/不透明が混在してるってことね。\nそれ、Babylon.js が一番苦手なやつです。\n> Babylon.js は 1メッシュ内のサブメッシュごとに透明・不透明を分けて描画順制御できない。\n\nはい...そんな気もまぁした。"
+    },
+    {
+      "author": "henohenon",
+      "created_at": "2025-07-06",
+      "body_markdown": "オブジェクトベースとなるとオブジェクトを分けるだけだと解消しなさそう"
+    },
+    {
+      "author": "henohenon",
+      "created_at": "2025-07-06",
+      "body_markdown": "短冊状にすればワンちゃんあるのかもだが"
+    },
+    {
+      "author": "henohenon",
+      "created_at": "2025-07-06",
+      "body_markdown": "結論\n- needDepthPrePass+alwaysSelectAsActiveMeshが結論\n- 透明度は使えない\n原因\n- 基本メッシュ本体の位置指定による描画順制御\n- zバッファによっての描画順制御はあるが、alphaは考慮されず、マスク的に働く"
+    },
+    {
+      "author": "henohenon",
+      "created_at": "2025-07-06",
+      "body_markdown": "```typescript\nmesh.alwaysSelectAsActiveMesh = true;\nconst mat = mesh.material;\nif(mat){\n    mat.disableDepthWrite  = true;\n    mat.forceDepthWrite = false;\n    mat.alpha = 1;\n    mat.depthFunction = Engine.ALWAYS;\n    mat.alphaMode = Engine.ALPHA_ADD;\n    mat.transparencyMode = Material.MATERIAL_ALPHABLEND;\n    mesh.renderingGroupId = 0.75;\n    mat.backFaceCulling = false;\n    \n    mesh.material = mat;\n    mesh.position.z += 0.001;\n}\n```\nハイライトだけでも前に出したいなーと思って色々つけてみたがダメ。おとなしくハイライトをくりぬく"
+    },
+    {
+      "author": "henohenon",
+      "created_at": "2025-07-06",
+      "body_markdown": "![](https://storage.googleapis.com/zenn-user-upload/6d438fb18373-20250706.png)\nこうじゃ！alphaとかは余裕があったら検討したいけどねぇ"
+    }
+  ]
+}
