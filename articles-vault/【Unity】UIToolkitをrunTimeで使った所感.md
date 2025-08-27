@@ -1,0 +1,81 @@
+---
+title: "【Unity】UIToolkitをrunTimeで使った所感"
+slug: "d447fb3a764f49"
+emoji: "🧰"
+date: "2025-03-05 17:45"
+---
+
+# UIToolkit vs uGUI
+## 結論
+マッチするプロジェクトでは十二分に力を発揮できる。が、まったく万能/上位互換ではないためちゃんと特性を抑えないと痛い目に合う。
+
+## UIToolkit
+HTML/CSSの思想に基づいた独自のUXML/USSによるUI
+- クラスによる共通化
+- flexなどによる柔軟なレイアウト
+- マージが現実的
+- 簡単な図形なら画像不要で作れる
+ココがダメ
+- ハードルが高い
+    - 独自の知識が必要
+    - デザイナーにやさしいツールではない
+    - 記事がない
+- ブラーなど、特殊効果の実装が非常に難しい
+## uGUI
+GameObject/Componentに基づいたUI
+- プレファブによる共通化
+- Horizontal/Vertical/GridComponentによるレイアウト
+- materialがつけれる
+- (OnClickなどのunityEventがある)
+ココがダメ
+- マージが現実的ではない
+- レイアウトがしんどい
+- 共通化もしんどい
+# More about UIToolkit
+## スタイル
+### CSS最高！！
+flex、margin、border-radius、background-colorなど見慣れたメンツ。全体の色を:rootで指定したり、.active+transactionで色変えたりなど自由自在。大変はかどる。
+ただしz-index、flex-gapなどの一部必須級プロパティがない。助けてほしい。
+### ベストパフォーマンス
+https://light11.hatenadiary.com/entry/2024/03/26/193252
+- BEMで命名
+- クラス/USSは少ないほうが良い
+- スタイルはUSSで書く
+- TODO: transaction vs tweenライブラリ調べたい
+### tailwind的アプローチ
+https://github.com/BennyKok/unity-tailwindcss
+イチイチクラス指定するのしんどい場面多いと感じるので、一度試してみたい。
+ベストパフォーマンスではないし、負債化するという話もある
+- https://zenn.dev/saltedlemon/articles/2e16ec10404f2d
+- https://fuku.day/blog/2024-08-10-tailwind/
+## ハードルが高い
+### 記事がない
+体感10分の1とか。uGUIが多すぎという話もある。
+### 知識/学びが必要
+- html/cssのナレッジは50%ぐらいしか生きないし、unityのナレッジもあんまり生きない
+    - 内部の概念/単語にはhtml/cssの知識が必要
+    - editorやスクリプトによる制御にはunityの知識が必要
+- そのうえで独特の癖がある
+- 健全な運用をしようとすると、デザイナーが触れない
+    - uxmlをguiで触れるなんちゃってfigmaは存在する
+    → しかしこれを使うとuxml側がめちゃめちゃになる。
+    → git管理が終わる
+## C#CustomControl
+自分で挙動付きのhtmlタグを作れるイメージ
+- マルチセレクトのドロップダウンなど量産したい独自パーツなどに使う
+- Obserbableにできたりする
+- Uxml Attributeも定義できる
+    - そこまで強くない。リストの画像とかはだいぶ無理で、外部から注入かuss経由で指定などになる
+    - uxml attributeの拡張を作ったらいける説
+
+よくわからんコンストラクターもどき書かされるのであまり好きではない/触れていない。
+もうちょっと使ったらこれの記事書く。かも。
+## RenderTextureを使わなければ特殊表現ができない
+materialが使えないため。ブラーなどが最たる例。ロードマップにはあるらしい。
+- 一度renderTextureに描画しそれに処理をかけることが必要
+    - 重なるブラーなどすると複数のrenderTextureが必要になりそうでヤバイ
+
+https://assetstore.unity.com/packages/2d/gui/ui-toolkit-blurred-background-fast-translucent-ui-blur-image-254328
+アセットもあるが、私の環境だと動かなかったりした(調査中)
+
+特殊効果をたくさんかける必要があり、renderTextureに耐性がなければ見送ったほうが無難

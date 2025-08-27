@@ -2,7 +2,16 @@
   "name": "zenn",
   "module": "index.ts",
   "type": "module",
+  "scripts": {
+    "convert": "bun run scripts/obsidian-to-zenn.ts",
+    "convert:watch": "bun run scripts/obsidian-to-zenn.ts && echo 'Conversion completed'"
+  },
   "dependencies": {
-    "zenn-cli": "^0.2.1"
+    "zenn-cli": "^0.2.1",
+    "gray-matter": "^4.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
   }
 }
