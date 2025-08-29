@@ -49,7 +49,7 @@ class ObsidianToZennConverter {
       const entries = fs.readdirSync(currentDir, { withFileTypes: true });
       
       entries.forEach(entry => {
-        if (entry.isDirectory() && entry.name !== '.obsidian') {
+        if (entry.isDirectory() && entry.name !== '.obsidian' && entry.name !== 'templates') {
           traverse(path.join(currentDir, entry.name));
         } else if (entry.isFile()) {
           const ext = path.extname(entry.name).toLowerCase();

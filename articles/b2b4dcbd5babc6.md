@@ -1,5 +1,5 @@
 ---
-title: "docker強化月間: ts+scss環境をwebpack使わずに作ってみる"
+title: "【docker強化月間】ts+scss環境をwebpack使わずに作ってみる"
 emoji: "🐋"
 type: "tech"
 topics:

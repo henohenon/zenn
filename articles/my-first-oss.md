@@ -1,5 +1,5 @@
 ---
-title: "prismatix input: 初めてossを公開した"
+title: "【prismatix-input】初めてossを公開した"
 emoji: "🚀"
 type: "tech"
 published: false

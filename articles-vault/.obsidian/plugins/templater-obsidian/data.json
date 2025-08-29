@@ -16,7 +16,7 @@
   "folder_templates": [
     {
       "folder": "/",
-      "template": "templates/Default Template.md"
+      "template": "templates/default_template.md"
     }
   ],
   "enable_file_templates": false,

@@ -27,12 +27,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "templates/Default Template.md",
+                "file": "templates/default_template.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Default Template"
+              "title": "default_template"
+            }
+          },
+          {
+            "id": "3705d9f637b583a6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "【docker強化月間】ts+scss環境をwebpack使わずに作ってみる.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "【docker強化月間】ts+scss環境をwebpack使わずに作ってみる"
             }
           },
           {
@@ -41,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "templates/Default Template.md",
+                "file": "templates/default_template.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Default Template"
+              "title": "default_template"
             }
           }
         ],
@@ -123,7 +137,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "templates/Default Template.md",
+                "file": "【docker強化月間】ts+scss環境をwebpack使わずに作ってみる.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +147,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Default Template"
+              "title": "Backlinks for 【docker強化月間】ts+scss環境をwebpack使わずに作ってみる"
             }
           },
           {
@@ -142,12 +156,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "templates/Default Template.md",
+                "file": "【docker強化月間】ts+scss環境をwebpack使わずに作ってみる.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Default Template"
+              "title": "Outgoing links from 【docker強化月間】ts+scss環境をwebpack使わずに作ってみる"
             }
           },
           {
@@ -171,13 +185,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "templates/Default Template.md",
+                "file": "【docker強化月間】ts+scss環境をwebpack使わずに作ってみる.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Default Template"
+              "title": "Outline of 【docker強化月間】ts+scss環境をwebpack使わずに作ってみる"
             }
           }
         ]
@@ -199,21 +213,21 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "df80ea95a822992e",
+  "active": "3705d9f637b583a6",
   "lastOpenFiles": [
-    "test-no-slug-article.md",
-    "test-no-slug.md",
     "Untitled.md",
-    "templates/Default Template.md",
-    "Untitled 1.md",
+    "【docker強化月間】ts+scss環境をwebpack使わずに作ってみる.md",
+    "【Unity】hidapiでラグが発生する話.md",
+    "【Unity】UIToolkitをrunTimeで使った所感.md",
+    "【初心者】今日からできるチーム開発@GithubDesktop.md",
     "effekseer堪能した話.md",
     "Pasted image 20250829154310.png",
-    "【Unity】hidapiでラグが発生する話.md",
+    "templates/default_template.md",
+    "test-no-slug-article.md",
+    "test-no-slug.md",
+    "Untitled 1.md",
     "templates",
     "【prismatix-input】初めてossを公開した.md",
-    "【prismatix-input】初めてossを公開した.md~",
-    "【初心者】今日からできるチーム開発@GithubDesktop.md",
-    "【Unity】UIToolkitをrunTimeで使った所感.md",
-    "【docker強化月間】ts+scss環境をwebpack使わずに作ってみる.md"
+    "【prismatix-input】初めてossを公開した.md~"
   ]
 }
