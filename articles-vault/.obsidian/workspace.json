@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "templates/default_template.md",
+                "file": "【docker強化月間】ts+scss環境をwebpack使わずに作ってみる.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "default_template"
+              "title": "【docker強化月間】ts+scss環境をwebpack使わずに作ってみる"
             }
           },
           {
@@ -151,7 +151,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "templates/default_template.md",
+                "file": "【docker強化月間】ts+scss環境をwebpack使わずに作ってみる.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -161,7 +161,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for default_template"
+              "title": "Backlinks for 【docker強化月間】ts+scss環境をwebpack使わずに作ってみる"
             }
           },
           {
@@ -170,12 +170,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "templates/default_template.md",
+                "file": "【docker強化月間】ts+scss環境をwebpack使わずに作ってみる.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from default_template"
+              "title": "Outgoing links from 【docker強化月間】ts+scss環境をwebpack使わずに作ってみる"
             }
           },
           {
@@ -199,13 +199,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "templates/default_template.md",
+                "file": "【docker強化月間】ts+scss環境をwebpack使わずに作ってみる.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of default_template"
+              "title": "Outline of 【docker強化月間】ts+scss環境をwebpack使わずに作ってみる"
             }
           }
         ]
@@ -229,6 +229,7 @@
   },
   "active": "7168669604fe4055",
   "lastOpenFiles": [
+    "templates/default_template.md",
     "test-no-date.md~",
     "test-no-date.md",
     "Untitled.md",
@@ -238,7 +239,6 @@
     "【初心者】今日からできるチーム開発@GithubDesktop.md",
     "effekseer堪能した話.md",
     "Pasted image 20250829154310.png",
-    "templates/default_template.md",
     "test-no-slug-article.md",
     "test-no-slug.md",
     "Untitled 1.md",
