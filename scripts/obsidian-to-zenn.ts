@@ -136,7 +136,7 @@ class ObsidianToZennConverter {
     
     // Extract inline tags (including Japanese characters)
     // Use negative lookbehind to avoid matching hashtags preceded by "C" (for C#) or at line start (for markdown headings)
-    const tagRegex = /(?<!C)(?<!^[ \t]*#{1,6}[ \t]*)#([a-zA-Z0-9_\-/\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FAF]+)/gm;
+    const tagRegex = /(?:^|[\s])#([a-zA-Z0-9_\-/\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FAF]+)/gm;
     let match: RegExpExecArray | null;
 
     while ((match = tagRegex.exec(content)) !== null) {
@@ -233,11 +233,20 @@ class ObsidianToZennConverter {
       // Published_at from date field
       if (parsed.data.date) {
         frontmatter.published_at = parsed.data.date;
+      } else {
+        // If no date is provided, use current date in YYYY-MM-DD HH:mm format
+        const now = new Date();
+        const year = now.getFullYear();
+        const month = String(now.getMonth() + 1).padStart(2, '0');
+        const day = String(now.getDate()).padStart(2, '0');
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        frontmatter.published_at = `${year}-${month}-${day} ${hours}:${minutes}`;
       }
 
       // Generate filename from slug or create new one
       let filename: string;
-      if (parsed.data.slug) {
+      if (parsed.data.slug || parsed.data.slug === "") {
         filename = `${parsed.data.slug}.md`;
       } else {
         // Generate a random 12-character slug
