@@ -1,5 +1,4 @@
 ---
-title: "【docker強化月間】ts+scss環境をwebpack使わずに作ってみる"
 slug: "b2b4dcbd5babc6"
 emoji: "🐋"
 date: "2024-08-02 19:31"
@@ -135,3 +134,5 @@ dockerもcompose.ymlでよくなってたり、いろいろdockerも進化して
 
 いったん満足しちゃったのでここで供養しておきます。ビルドできないのは終わってるしどっかで帰ってくる気はする。
 次はRemoteContainer(DevContainer)、esbuild-loader触りたいかな～。
+
+#docker #esbuild #pnpm

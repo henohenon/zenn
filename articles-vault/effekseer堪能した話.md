@@ -1,5 +1,4 @@
 ---
-title: "effekseer堪能した話"
 slug: "cf68e1db1b4726"
 emoji: "💙"
 date: "2022-07-03 20:55"
@@ -103,3 +102,6 @@ sideRibbonと同じ軌道をたどる透明なの作って
 ## 小ネタ
 でかすぎて描画距離の限界超えてる。割と大変。
 ![](https://storage.googleapis.com/zenn-user-upload/19171499a0a6-20220702.png)
+
+
+#particle #effekseer

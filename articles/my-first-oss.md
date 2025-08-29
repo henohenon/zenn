@@ -1,8 +1,9 @@
 ---
-slug: "my-first-oss"
+title: "prismatix input: 初めてossを公開した"
 emoji: "🚀"
+type: "tech"
 published: false
-date: "2025-08-27 15:43"
+published_at: "2025-08-27 15:43"
 ---
 # 作ったもの
 webの入力を統合・拡張的に扱えるシンプルなライブラリです。
@@ -25,4 +26,4 @@ playgroundが動かない
 aiを使うなどしているハナシ
 気分の話
 
-![[Pasted image 20250829154310.png]]
+![Pasted image 20250829154310](/images/Pasted%20image%2020250829154310.png)

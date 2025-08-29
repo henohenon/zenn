@@ -1,10 +1,9 @@
 ---
-title: "【Unity】UIToolkitをrunTimeで使った所感"
 slug: "d447fb3a764f49"
 emoji: "🧰"
 date: "2025-03-05 17:45"
 ---
-
+G
 # UIToolkit vs uGUI
 ## 結論
 マッチするプロジェクトでは十二分に力を発揮できる。が、まったく万能/上位互換ではないためちゃんと特性を抑えないと痛い目に合う。
@@ -79,3 +78,5 @@ https://assetstore.unity.com/packages/2d/gui/ui-toolkit-blurred-background-fast-
 アセットもあるが、私の環境だと動かなかったりした(調査中)
 
 特殊効果をたくさんかける必要があり、renderTextureに耐性がなければ見送ったほうが無難
+
+#unity #uitoolkit

@@ -1,0 +1,219 @@
+{
+  "main": {
+    "id": "191295221eedc4a6",
+    "type": "split",
+    "children": [
+      {
+        "id": "bf924a0646940ae9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0f2e9ce84d84f769",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "effekseer堪能した話.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "effekseer堪能した話"
+            }
+          },
+          {
+            "id": "e4bd63305a52c208",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "templates/Default Template.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Default Template"
+            }
+          },
+          {
+            "id": "df80ea95a822992e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "templates/Default Template.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Default Template"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "1bf4511b8f1bb165",
+    "type": "split",
+    "children": [
+      {
+        "id": "c369447ae67f492c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "63d3d04b16242d96",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "17fe0e2b6bfe579c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "22ab4bbaff38a092",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "cb622c97cd76ce0f",
+    "type": "split",
+    "children": [
+      {
+        "id": "41410b8f924fe003",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "875f87c48810e46c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "templates/Default Template.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Default Template"
+            }
+          },
+          {
+            "id": "1d27c22d56ce3f53",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "templates/Default Template.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Default Template"
+            }
+          },
+          {
+            "id": "ea50456f2cfedefc",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "49403521b841188f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "templates/Default Template.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Default Template"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "df80ea95a822992e",
+  "lastOpenFiles": [
+    "test-no-slug-article.md",
+    "test-no-slug.md",
+    "Untitled.md",
+    "templates/Default Template.md",
+    "Untitled 1.md",
+    "effekseer堪能した話.md",
+    "Pasted image 20250829154310.png",
+    "【Unity】hidapiでラグが発生する話.md",
+    "templates",
+    "【prismatix-input】初めてossを公開した.md",
+    "【prismatix-input】初めてossを公開した.md~",
+    "【初心者】今日からできるチーム開発@GithubDesktop.md",
+    "【Unity】UIToolkitをrunTimeで使った所感.md",
+    "【docker強化月間】ts+scss環境をwebpack使わずに作ってみる.md"
+  ]
+}

@@ -1,5 +1,4 @@
 ---
-title: "【Unity】hidapiでラグが発生する話"
 slug: "5e53f268e89f06"
 emoji: "🎮"
 date: "2024-08-13 18:08"
@@ -40,3 +39,5 @@ https://docs.unity3d.com/Packages/com.unity.inputsystem@1.7/api/UnityEngine.Inpu
 ## hidapi
 なんだかんだhidapi読んでたんだけど、シンプルなのもあってとても読みやすかった。オープンソース＆コメント文化万歳。
 あそこまで単純だと、自分でもかけてしまうのではないだろうか。まぁ現実的な話をしだすとhidapi万歳ではあるのだが、自分で書いてたらもっと早く終わった説。ちょっとある。今後なんかあったらc++の勉強がてら書いてみるのもありかもしれない。
+
+#unity #hidapi
