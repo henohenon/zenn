@@ -21,12 +21,9 @@ date: 2025-09-28 20:19
 選択(Stage)した作業を保存する行為。適切な作業内容を書いてcommitボタン
 ![[Pasted image 20250928203047.png]]
 **Push**
-ネットに
-# 競合したときは
-![conflictOnGithubDesktop](https://storage.googleapis.com/zenn-user-upload/d8b856b339e9-20241227.png)
-困ったときはchangesタブの変更ファイル数のところで**右クリック→discard all changes**をすると解消されます。
-ただしこれは、**現在の手元の変更をすべて削除することとなる**ため、もし削除したくない場合は別の方法を試す必要があります。
-![discardAllOnGithubDesktop](https://storage.googleapis.com/zenn-user-upload/8eb4ac635c57-20241227.png)
+保存した作業をネットに上げ、共有する行為
+![[Pasted image 20250928203318.png]]
+可能な限り細かくコミットしていくのがおすすめ
 # 注意書き
 これはあくまで極限までシンプルにした方法です。
 gitには様々なチーム開発のための機能があります。ぜひより良い運用を目指しましょう！
