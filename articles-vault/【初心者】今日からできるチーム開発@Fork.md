@@ -1,7 +1,7 @@
 ---
 slug: kemz6jjygnpm
 emoji: 🍴
-published: false
+published: true
 date: 2025-09-28 20:19
 ---
 
