@@ -20,7 +20,8 @@ date: 2025-09-28 20:19
 **Commit**
 選択(Stage)した作業を保存する行為。適切な作業内容を書いてcommitボタン
 ![[Pasted image 20250928203047.png]]
-
+**Push**
+ネットに
 # 競合したときは
 ![conflictOnGithubDesktop](https://storage.googleapis.com/zenn-user-upload/d8b856b339e9-20241227.png)
 困ったときはchangesタブの変更ファイル数のところで**右クリック→discard all changes**をすると解消されます。
