@@ -7,17 +7,17 @@ date: 2025-09-28 20:19
 
 #github #fork
 
-# Fetch/Pull Origin
+# Fetch, Pull
 作業を開始する前は**必ずFetch, Pull**しましょう。
 ![[Pasted image 20250928202438.png]]
 他の人の作業を手元に持ってくる工程です。これで他の人の作業が確認できるほか、競合が発生しにくくなります。
-# Commit/Push Origin
-作業終了する際は**必ずCommit, Push**しましょう
+# Stage, Commit, Push
+作業終了する際は**必ずStage, Commit, Push**しましょう
 
+**Stage**
+保存する作業を選択する行為。一番上を選択すると全部になる
+![[Pasted image 20250928202845.png]]
 
-![commitOnGithubDesktop](https://storage.googleapis.com/zenn-user-upload/cb92e78f0145-20241227.png)
-![pushOriginOnGithubDesktop](https://storage.googleapis.com/zenn-user-upload/f1528bbb7095-20241227.png)
-自分の作業を保存し、ネット上に上げる工程です。これで他の人に作業の共有ができます。なるだけこまめに行うことで競合が発生しにくくなります
 # 競合したときは
 ![conflictOnGithubDesktop](https://storage.googleapis.com/zenn-user-upload/d8b856b339e9-20241227.png)
 困ったときはchangesタブの変更ファイル数のところで**右クリック→discard all changes**をすると解消されます。
