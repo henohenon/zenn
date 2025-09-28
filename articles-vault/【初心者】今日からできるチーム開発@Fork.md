@@ -15,8 +15,11 @@ date: 2025-09-28 20:19
 作業終了する際は**必ずStage, Commit, Push**しましょう
 
 **Stage**
-保存する作業を選択する行為。一番上を選択すると全部になる
+保存する作業を選択する行為。changesに移動し、作業を選択、Stageボタン。作業は一番上を選択すると全部になる
 ![[Pasted image 20250928202845.png]]
+**Commit**
+選択(Stage)した作業を保存する行為。適切な作業内容を書いてcommitボタン
+![[Pasted image 20250928203047.png]]
 
 # 競合したときは
 ![conflictOnGithubDesktop](https://storage.googleapis.com/zenn-user-upload/d8b856b339e9-20241227.png)
