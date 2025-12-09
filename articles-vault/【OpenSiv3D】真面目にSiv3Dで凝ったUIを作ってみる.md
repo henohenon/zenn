@@ -22,7 +22,7 @@ https://github.com/tukuruttyan/siv3d2025
   
 今回作ったUIはこんな感じです。  
 。。。正直作り込みが追いついてないです；；ごめんなさい。  
-![[sinkaiui.gif]]  
+![sinkaiui.gif](https://raw.githubusercontent.com/henohenon/zenn/refs/heads/main/articles-vault/sinkaiui.gif)  
 # 具体的な実装  
 今回は次の画像のように分割して解説していきます。  
 ![[Pasted image 20251209192439.png]]  
