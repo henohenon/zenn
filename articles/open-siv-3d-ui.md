@@ -58,10 +58,10 @@ https://github.com/henohenon/zenn/blob/main/codes/open-siv-3d-ui.cpp#L252-L285
 技術的には、[ScopedViewport2D](https://siv3d.github.io/ja-jp/tutorial3/2d-render-state/#4813-%E3%83%93%E3%83%A5%E3%83%BC%E3%83%9D%E3%83%BC%E3%83%88)を使うことで、シンプルに動的な見切れを実装できた。とても感謝  
 ## 3. 取って  
 キャンバスの取って、Handle。  
-https://github.com/henohenon/zenn/blob/main/codes/open-siv-3d-ui.cpp#L149-L164
+https://github.com/henohenon/zenn/blob/main/codes/open-siv-3d-ui.cpp#L344-L388
 事前にポリゴンを定義しておくことで、リアルタイムの不可を下げている。(実際に効果があるかはちゃんと試せてないけど、意志としてはそう。)  
 ## 4. レーダー  
-https://github.com/henohenon/zenn/blob/main/codes/open-siv-3d-ui.cpp#L167-L191
+https://github.com/henohenon/zenn/blob/main/codes/open-siv-3d-ui.cpp#L390-L453
 
 本来はここに今作ってるキメラのステータスを表示させたかったのだ...ポ◯モンみたいな。。。  
 https://siv3d.github.io/ja-jp/course/radar-chart/  
@@ -69,7 +69,7 @@ https://siv3d.github.io/ja-jp/course/radar-chart/
 シンプルなものの組み合わせだが、moveByとかに微妙にクセが有り絶妙に苦戦した記憶。こういうのはgui欲しくなるかも。  
 
 ## 5. ミニマップ  
-https://github.com/henohenon/zenn/blob/main/codes/open-siv-3d-ui.cpp#L194-L223
+https://github.com/henohenon/zenn/blob/main/codes/open-siv-3d-ui.cpp#L455-L550
 
 これも長い...影、中身くり抜き、拠点イメージ画像は取ってと同様に予めポリゴン化をしてある。フェードの調整とかがなかなか根性だった。なんかイイカンジに内側フェードな角丸の四角形とか台形とか書けてほしい～  
 
