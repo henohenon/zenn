@@ -25,7 +25,7 @@ https://github.com/tukuruttyan/siv3d2025
 ![sinkaiui.gif](https://raw.githubusercontent.com/henohenon/zenn/refs/heads/main/articles-vault/sinkaiui.gif)  
 # 具体的な実装  
 今回は次の画像のように分割して解説していきます。  
-![Pasted image 20251209192439](/images/Pasted%20image%2020251209192439.png)  
+![Pasted-image_20251209192439](/images/Pasted-image_20251209192439.png)  
 https://github.com/tukuruttyan/siv3d2025/blob/main/siv3d2025/StageUI.cpp  
 また実装は一部を覗いてほぼこのファイルだけで完結しています。500行というまぁまぁな行数ですが、関数でちゃんと区切ってはあるので一応読めるんじゃないかなーとは思ってます。updateから辿ってもらえれば。  
 ```c++  
@@ -188,7 +188,7 @@ StageUI::CanvasRects StageUI::drawKimeraCanvas(Size size) const
 ```  
 な、長い。これでも省略してるんだけどな～。個別処理しなきゃな要素が多い。  
 
-![Pasted image 20251210000303](/images/Pasted%20image%2020251210000303.png)  
+![Pasted-image_20251210000303](/images/Pasted-image_20251210000303.png)  
 実はキャンバスの上下にはちょっとだけフェードが仕込んである。こういう作り込みいいよね。  
 
 技術的には、[ScopedViewport2D](https://siv3d.github.io/ja-jp/tutorial3/2d-render-state/#4813-%E3%83%93%E3%83%A5%E3%83%BC%E3%83%9D%E3%83%BC%E3%83%88)を使うことで、シンプルに動的な見切れを実装できた。とても感謝  
