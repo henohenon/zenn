@@ -49,7 +49,7 @@ https://github.com/henohenon/zenn/blob/main/codes/open-siv-3d-ui.cpp#L165-L188
 ## 2. キャンバス  
 こっちはキメラを作るためのキャンバス。ここにキリミを配置する。かなり可変に動いて気持ち良い。  
 https://github.com/henohenon/zenn/blob/main/codes/open-siv-3d-ui.cpp#L191-L249
-https://github.com/henohenon/zenn/blob/main/codes/open-siv-3d-ui.cpp#L252-L285
+https://github.com/henohenon/zenn/blob/main/codes/open-siv-3d-ui.cpp#L252-L342
 な、長い。これでも省略してるんだけどな～。個別処理しなきゃな要素が多い。  
 
 ![[Pasted-image_20251210000303.png]]  
