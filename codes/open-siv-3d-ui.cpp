@@ -462,13 +462,6 @@ void StageUI::updateMinimap(Vec2 scroll) const
 void StageUI::drawMinimap(Vec2 scroll) const
 {
     // 各種プロパティの定義...
-    // 例:
-    // const int frameSize = 20;
-    // const int outFrameSize = 15;
-    // const int inFrameSize = 10;
-    // const int mainCornerR = 40;
-    // const Point mainSize{ 300, 500 };
-    // などなど
 
     // ベースの図形
     const RoundRect mainRect{ frameSize, frameSize, mainSize, mainCornerR };

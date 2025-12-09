@@ -69,7 +69,7 @@ https://siv3d.github.io/ja-jp/course/radar-chart/
 シンプルなものの組み合わせだが、moveByとかに微妙にクセが有り絶妙に苦戦した記憶。こういうのはgui欲しくなるかも。  
   
 ## 5. ミニマップ  
-https://github.com/henohenon/zenn/blob/main/codes/open-siv-3d-ui.cpp#L455-L550
+https://github.com/henohenon/zenn/blob/main/codes/open-siv-3d-ui.cpp#L455-L543
   
 これも長い...影、中身くり抜き、拠点イメージ画像は取ってと同様に予めポリゴン化をしてある。フェードの調整とかがなかなか根性だった。なんかイイカンジに内側フェードな角丸の四角形とか台形とか書けてほしい～  
   
