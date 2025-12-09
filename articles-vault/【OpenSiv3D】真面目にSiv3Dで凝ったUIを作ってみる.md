@@ -8,7 +8,7 @@ date: 2025-12-09 12:00
   
 この記事は[Siv3Dアドベントカレンダー2025](https://qiita.com/advent-calendar/2025/siv3d)の9日目の記事です！  
 - 前回: https://qiita.com/HazukiKojima/items/cce24d666f7c83aed48f  
-- 次回:（執筆時点では未定）  
+- 次回: https://qiita.com/m4saka/items/5bcfb90ef6b78278ca19
 
 # はじめに  
 こんにちは！ゲームをメインに色々作ってるへのへのんです！  
