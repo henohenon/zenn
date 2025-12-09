@@ -78,6 +78,32 @@
             }
           },
           {
+            "id": "c5533b5490d70c0e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "【OpenSiv3D】真面目にSiv3Dで凝ったUIを作ってみる.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "【OpenSiv3D】真面目にSiv3Dで凝ったUIを作ってみる"
+            }
+          },
+          {
+            "id": "dfe8864dada3a5d4",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.9.14"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.9.14"
+            }
+          },
+          {
             "id": "df80ea95a822992e",
             "type": "leaf",
             "state": {
@@ -92,7 +118,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -240,29 +266,34 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "c1c391c46feb8ef2",
+  "active": "c5533b5490d70c0e",
   "lastOpenFiles": [
+    "Pasted image 20251210000303.png",
+    "Pasted image 20251210000229.png",
+    "Pasted image 20251209192439.png",
+    "Pasted image 20251209192425.png",
+    "effekseer堪能した話.md",
+    "Pasted image 20251209190030.png",
+    "Pasted image 20251209190725.png",
+    "【OpenSiv3D】真面目にSiv3Dで凝ったUIを作ってみる.md",
+    "sinkaiui.gif",
+    "templates/default_template.md",
+    "【prismatix-input】初めてossを公開した.md",
+    "【Unity】UIToolkitをrunTimeで使った所感.md",
+    "【初心者】今日からできるチーム開発@Fork.md",
+    "【初心者】今日からできるチーム開発@GithubDesktop.md",
+    "【docker強化月間】ts+scss環境をwebpack使わずに作ってみる.md",
     "Pasted image 20250928203318.png",
     "Pasted image 20250928203234.png",
     "Pasted image 20250928203047.png",
     "Pasted image 20250928202845.png",
-    "Pasted image 20250928202438.png",
-    "【初心者】今日からできるチーム開発@GithubDesktop.md",
-    "Pasted image 20250928202328.png",
-    "Pasted image 20250829154310.png",
-    "【初心者】今日からできるチーム開発@Fork.md",
-    "templates/default_template.md",
-    "【Unity】UIToolkitをrunTimeで使った所感.md",
     "【Unity】hidapiでラグが発生する話.md",
-    "【docker強化月間】ts+scss環境をwebpack使わずに作ってみる.md",
     "test-no-date.md~",
     "test-no-date.md",
-    "effekseer堪能した話.md",
     "test-no-slug-article.md",
     "test-no-slug.md",
     "Untitled 1.md",
     "templates",
-    "【prismatix-input】初めてossを公開した.md",
     "【prismatix-input】初めてossを公開した.md~"
   ]
 }
