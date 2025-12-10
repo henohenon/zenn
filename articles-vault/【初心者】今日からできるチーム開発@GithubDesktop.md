@@ -23,7 +23,8 @@ date: "2024-12-27 13:56"
 ![discardAllOnGithubDesktop](https://storage.googleapis.com/zenn-user-upload/8eb4ac635c57-20241227.png)
 # 注意書き
 これはあくまで極限までシンプルにした方法です。
-gitには様々なチーム開発のための機能があります。ぜひより良い運用を目指しましょう！
+git・バージョン管理には様々なチーム開発のための機能があります。ぜひより良い運用を目指しましょう！
 
-↓gitの主要な機能についての解説動画
-https://www.youtube.com/watch?v=LDOR5HfI_sQ
+git, githubについての過激かつ詳細な解説
+↓
+https://zenn.dev/kanaya/articles/455f5d735f3e83b11bae
