@@ -1,5 +1,5 @@
 ---
-slug: make-strune
+slug: make-strune-ssg
 emoji: 🪨
 type: tech
 published: true
