@@ -92,6 +92,20 @@
             }
           },
           {
+            "id": "f726ac2111e97c40",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "【趣味】RustでSSGを自作してみる.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "【趣味】RustでSSGを自作してみる"
+            }
+          },
+          {
             "id": "dfe8864dada3a5d4",
             "type": "leaf",
             "state": {
@@ -118,7 +132,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -266,8 +280,12 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "c5533b5490d70c0e",
+  "active": "f726ac2111e97c40",
   "lastOpenFiles": [
+    "Pasted-image_20251218105442.png",
+    "Pasted-image_20251218112220.png",
+    "【趣味】RustでSSGを自作してみる.md",
+    "【初心者】今日からできるチーム開発@GithubDesktop.md",
     "【OpenSiv3D】真面目にSiv3Dで凝ったUIを作ってみる.md",
     "【OpenSiv3D】真面目にSiv3Dで凝ったUIを作ってみる.md~",
     "img.png",
@@ -278,15 +296,12 @@
     "Pasted-image_20251209190725.png",
     "Pasted-image_20251209192425.png",
     "Pasted-image_20251209192439.png",
-    "Pasted-image_20251210000229.png",
-    "Pasted-image_20251210000303.png",
     "【初心者】今日からできるチーム開発@Fork.md",
     "【Unity】UIToolkitをrunTimeで使った所感.md",
     "【prismatix-input】初めてossを公開した.md",
     "【docker強化月間】ts+scss環境をwebpack使わずに作ってみる.md",
     "effekseer堪能した話.md",
     "templates/default_template.md",
-    "【初心者】今日からできるチーム開発@GithubDesktop.md",
     "【Unity】hidapiでラグが発生する話.md",
     "test-no-date.md~",
     "test-no-date.md",
