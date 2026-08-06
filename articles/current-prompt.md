@@ -2,9 +2,8 @@
 title: "最近の開発プロンプト"
 emoji: "📝"
 type: "tech"
-topics: ["AI", "Document"]
 published: true
-published_at: null
+topics: ["AI", "Document"]
 ---
 
 # 本体
